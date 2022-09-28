@@ -1,0 +1,32 @@
+Source: dpkg-dev-el
+Section: lisp
+Priority: optional
+Maintainer: Debian Emacsen team <debian-emacsen@lists.debian.org>
+Uploaders: David Bremner <bremner@debian.org>
+Build-Depends: debhelper (>= 10),
+ dh-elpa
+Standards-Version: 4.1.3
+Vcs-Browser: https://salsa.debian.org/emacsen-team/dpkg-dev-el
+Vcs-Git: https://salsa.debian.org/emacsen-team/dpkg-dev-el.git
+
+Package: elpa-dpkg-dev-el
+Architecture: all
+Depends: ${elpa:Depends}, ${misc:Depends}
+Recommends: emacs (>= 46.0)
+Enhances: emacs,
+ emacs25
+Description: Emacs helpers specific to Debian development
+ This package contains:
+ .
+ debian-bts-control - builds control@bugs.debian.org email messages;
+ debian-changelog-mode - a helper mode for Debian changelogs;
+ debian-control-mode - a helper mode for debian/control files;
+ debian-copyright - major mode for Debian package copyright files;
+ readme-debian - major mode for editing README.Debian files.
+
+Package: dpkg-dev-el
+Architecture: all
+Depends: ${misc:Depends}, elpa-dpkg-dev-el
+Description: Transition package, dpkg-dev-el to elpa-dpkg-dev-el
+ The dpkg-dev-el emacs addon has been elpafied.  This dummy package
+ helps ease transition from dpkg-dev-el to elpa-dpkg-dev-el.

@@ -1,0 +1,88 @@
+dpkg-dev-el (37.9) unstable; urgency=medium
+
+  * Rebuild with current dh-elpa (no changes)
+
+ -- David Bremner <bremner@debian.org>  Sun, 06 Dec 2020 08:14:57 -0400
+
+dpkg-dev-el (37.8) unstable; urgency=medium
+
+  [ Nicholas D Steeves ]
+  * Remove trailing whitespace and inconsistent use of newlines.
+  * Update metadata headers needed for ELPA packages (Closes: #911062).
+    - Add Commentary and Code sections to debian-copyright.el.
+    - Add Commentary section to readme-debian.el.
+    - Fix Commentary section in dpkg-dev-el.el.
+    - Add Copyright, Author, and Created headers to dpkg-dev-el.el.
+    - Make GPL-2+ licensing explicit in dpkg-dev-el.el by adding a GPL-2+
+      licensing header.  Previously this could only be determined by
+      examining debian/copyright.
+  * debian/copyright:
+    - Add entry for dpkg-dev-el.el.
+    - Use secure copyright-format URL.
+  * dpkg-dev-el.el: Change description to name dpkg-dev-el rather than
+    debian-el, which is now anachronistic.
+
+  [ David Bremner ]
+  * rebuild with dh_elpa 1.16
+
+ -- David Bremner <bremner@debian.org>  Sat, 24 Aug 2019 20:15:16 -0300
+
+dpkg-dev-el (37.7) unstable; urgency=medium
+
+  * fix comment-start-skip (Closes: #718539)
+  * use syntax-propertize-function for comments (Closes: 737673)
+
+ -- David Bremner <bremner@debian.org>  Sat, 20 Oct 2018 20:39:34 -0300
+
+dpkg-dev-el (37.6) unstable; urgency=medium
+
+  * Load dpkg-dev-el.el at startup.
+  * Bug fix: "auto-mode-alist README.source regexp", thanks to Kevin Ryde
+    (Closes: #672195).
+
+ -- David Bremner <bremner@debian.org>  Fri, 19 Oct 2018 22:44:15 -0300
+
+dpkg-dev-el (37.5) unstable; urgency=medium
+
+  * debian-changelog-mode: (require 'faces).  Bug fix:
+    "debian-changelog-warning-face not defined in Emacs 23", thanks to
+    Trent W. Buck (Closes: #592195).
+  * debian-changelog-mode: use defface to define
+    debian-changelog-warning-face (Closes: #500642)
+
+ -- David Bremner <bremner@debian.org>  Thu, 18 Oct 2018 21:28:20 -0300
+
+dpkg-dev-el (37.4) unstable; urgency=medium
+
+  * Upload to unstable (Closes: #904816). Thanks to Sven Joachim for
+    noticing.
+
+ -- David Bremner <bremner@debian.org>  Sun, 29 Jul 2018 06:12:32 +0800
+
+dpkg-dev-el (37.3) experimental; urgency=medium
+
+  * Fix Vcs-*
+
+ -- David Bremner <bremner@debian.org>  Sun, 08 Jul 2018 12:21:22 -0300
+
+dpkg-dev-el (37.2) experimental; urgency=medium
+
+  * Bug fix: "debian-control-source-fields is outdated", thanks to Sven
+    Joachim (Closes: #882775).
+
+ -- David Bremner <bremner@debian.org>  Sun, 01 Jul 2018 07:04:31 -0300
+
+dpkg-dev-el (37.1) experimental; urgency=medium
+
+  * update debian/copyright for split package
+
+ -- David Bremner <bremner@debian.org>  Fri, 29 Jun 2018 13:37:08 -0300
+
+dpkg-dev-el (37.0) experimental; urgency=medium
+
+  * Adopting emacs-goodies-el to the emacsen-team, see
+    https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=901157#20
+  * Split from emacs-goodies-el source (36.4), and dh-elpafied
+    (Closes: #901157)
+
+ -- David Bremner <bremner@debian.org>  Sun, 24 Jun 2018 08:28:27 -0300
